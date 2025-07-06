@@ -48,9 +48,7 @@ function Navbar() {
 
         {/* Burger */}
         <div className="lg:hidden block">
-          <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
-            <BurgerMenu />
-          </button>
+          <BurgerMenu onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} />
         </div>
       </div>
 

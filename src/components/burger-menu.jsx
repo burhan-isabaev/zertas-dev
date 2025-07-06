@@ -1,6 +1,6 @@
 import { motion, MotionConfig } from "framer-motion";
 import { useState } from "react";
-function BurgerMenu() {
+function BurgerMenu({ onClick }) {
   const [active, setActive] = useState(false);
 
   return (
@@ -12,7 +12,10 @@ function BurgerMenu() {
       <motion.button
         initial={false}
         className="relative h-10 w-10 rounded-full"
-        onClick={() => setActive((prev) => !prev)}
+        onClick={() => {
+          setActive((prev) => !prev);
+          onClick();
+        }}
         animate={active ? "open" : "closed"}
       >
         <motion.span
