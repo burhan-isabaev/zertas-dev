@@ -1,10 +1,13 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Navbar from "./sections/navbar";
+import Hero from "./sections/hero";
 
 function App() {
-
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
 
 export default App;

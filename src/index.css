@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {  
+    --font-primary: "Plus Jakarta Sans", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --light: #eed5b9;
+    --text-color: #3e3128;
+    --accent: #e1af87;
+    --background-color: #f4e6d5;
+}
+
+html {
+  margin: 12px;
+  background-color: #f4e6d5;
+  color: #3e3128;
+}
+
