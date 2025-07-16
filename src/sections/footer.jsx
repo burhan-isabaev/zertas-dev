@@ -1,3 +1,7 @@
+import Instagram from "../icons/instagram";
+import WhatsApp from "../icons/whatsapp";
+import Button from "../components/button";
+
 const services = [
   { name: "Кухни", href: "/services/kitchens" },
   { name: "Ванные", href: "/services/bathrooms" },
@@ -23,6 +27,16 @@ const Footer = () => {
             <p className="text-sm opacity-80 max-w-xs">
               Уникальные 3D панели, вдохновляющие пространство
             </p>
+          </div>
+          <div className="flex lg:gap-4 lg:flex-1 lg:justify-start lg:items-center">
+            <div className="w-fit flex gap-4">
+              <a href="/" className="hover:text-[#e1af87] transition">
+                <WhatsApp className="w-5 h-5" />
+              </a>
+              <a href="/" className="hover:text-[#e1af87] transition">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 

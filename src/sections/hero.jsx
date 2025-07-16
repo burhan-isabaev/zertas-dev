@@ -22,7 +22,7 @@ function Hero() {
             isLight
           />
 
-          <h1 className="text-4xl lg:text-7xl font-bold leading-tight text-[#f4e6d5]">
+          <h1 className="text-4xl lg:text-7xl font-bold text-[#f4e6d5]">
             Уникальные 3D панели, вдохновляющие пространство
           </h1>
 
