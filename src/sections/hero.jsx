@@ -15,18 +15,18 @@ function Hero() {
         aria-hidden="true"
       />
 
-      <div className="absolute mt-30 inset-0 flex items-center px-6 lg:px-20 ">
-        <div className="max-w-5xl space-y-6  z-10">
+      <div className="absolute mt-30 inset-0 flex items-end lg:items-center px-6 lg:px-20 ">
+        <div className="max-w-5xl space-y-6 mb-15 lg:mb-0 z-10">
           <SectionHeader
             text={"Дизайнерские гипсовые панели от Zertas · Астана"}
             isLight
           />
 
-          <h1 className="text-4xl lg:text-7xl font-bold text-[#f4e6d5]">
+          <h1 className="text-3xl lg:text-6xl font-bold text-[#f4e6d5]">
             Уникальные 3D панели, вдохновляющие пространство
           </h1>
 
-          <p className="text-lg max-w-2xl text-[#f4e6d5]">
+          <p className="text-md max-w-2xl text-[#f4e6d5] text-justify">
             Более 1000 довольных клиентов по всей стране доверяют нашему
             качеству, стилю и вниманию к деталям. Превратите стены вашего дома
             или офиса в элементы современного искусства.

@@ -3,9 +3,9 @@ import Button from "../components/button";
 const services = [
   { name: "Кухни", href: "/services/kitchens" },
   { name: "Ванные", href: "/services/bathrooms" },
-  { name: "Мебель", href: "/services/furniture" },
-  { name: "Полы", href: "/services/flooring" },
-  { name: "Здания", href: "/services/buildings" },
+  { name: "Гостиные", href: "/services/furniture" },
+  { name: "Спальни", href: "/services/flooring" },
+  { name: "Другие", href: "/services/buildings" },
 ];
 
 export default function Cta() {
