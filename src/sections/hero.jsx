@@ -15,8 +15,8 @@ function Hero() {
         aria-hidden="true"
       />
 
-      <div className="absolute mt-30 inset-0 flex items-end lg:items-center px-6 lg:px-20 ">
-        <div className="max-w-5xl space-y-6 mb-15 lg:mb-0 z-10">
+      <div className="absolute mt-40 inset-0 flex items-end lg:items-center px-6 lg:px-20 ">
+        <div className="max-w-5xl space-y-6 mb-5 lg:mb-0 z-10">
           <SectionHeader
             text={"Дизайнерские гипсовые панели от Zertas · Астана"}
             isLight
@@ -28,8 +28,7 @@ function Hero() {
 
           <p className="text-md max-w-2xl text-[#f4e6d5] text-justify">
             Более 1000 довольных клиентов по всей стране доверяют нашему
-            качеству, стилю и вниманию к деталям. Превратите стены вашего дома
-            или офиса в элементы современного искусства.
+            качеству, стилю и вниманию к деталям.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
