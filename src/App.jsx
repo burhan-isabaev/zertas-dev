@@ -4,6 +4,8 @@ import Services from "./sections/services";
 import Cta from "./sections/cta";
 import Footer from "./sections/footer";
 import Section from "./components/section";
+import About from "./sections/about";
+import Portfolio from "./sections/portfolio";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <Section>
         <Navbar />
         <Hero />
-        <Services />
+        <About />
+        <Portfolio />
+        {/* <Services /> */}
       </Section>
       <Cta />
       <Footer />
