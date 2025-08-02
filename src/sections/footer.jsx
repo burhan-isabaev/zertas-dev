@@ -1,5 +1,5 @@
-import Instagram from "../icons/instagram";
-import WhatsApp from "../icons/whatsapp";
+import Instagram from "../components/instagram";
+import Whatsapp from "../components/whatsapp";
 import Button from "../components/button";
 
 const services = [
@@ -30,12 +30,8 @@ const Footer = () => {
           </div>
           <div className="flex lg:gap-4 lg:flex-1 lg:justify-start lg:items-center">
             <div className="w-fit flex gap-4">
-              <a href="/" className="hover:text-[#e1af87] transition">
-                <WhatsApp className="w-5 h-5" />
-              </a>
-              <a href="/" className="hover:text-[#e1af87] transition">
-                <Instagram className="w-5 h-5" />
-              </a>
+              <Whatsapp />
+              <Instagram />
             </div>
           </div>
         </div>

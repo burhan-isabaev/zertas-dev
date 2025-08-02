@@ -31,13 +31,12 @@ export default function Cta() {
           {/* Services Links */}
           <div className="flex flex-wrap gap-3 mb-16">
             {services.map((service) => (
-              <a
+              <p
                 key={service.name}
-                href={service.href}
                 className="rounded-sm border-1 border-[#eed5b9] text-[#eed5b9] text-sm px-2 py-1 lg:py-2 transition-colors duration-300 hover:bg-[#eed5b9] hover:text-black"
               >
                 {service.name}
-              </a>
+              </p>
             ))}
           </div>
 

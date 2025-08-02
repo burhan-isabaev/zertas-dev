@@ -18,5 +18,6 @@ html {
   font-family: 'Inter', sans-serif;
   background-color: #f4e6d5;
   color: #3e3128;
+  scroll-behavior: smooth;
 }
 

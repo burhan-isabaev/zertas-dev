@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../components/button";
 import SectionHeader from "../components/section-header";
 
@@ -34,8 +35,8 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
             <Button text={"Получить консультацию"} link="/contact" isLight />
 
-            <a
-              href="/portfolio"
+            <Link
+              to="/catalog"
               className="relative inline-flex items-center gap-4 px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-md hover:scale-105 transition-transform duration-300"
             >
               <div>
@@ -59,7 +60,7 @@ function Hero() {
                   />
                 </svg>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

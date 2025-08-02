@@ -3,7 +3,7 @@ import Button from "../components/button";
 
 const About = () => {
   return (
-    <section className="py-16 lg:py-32 lg:px-20">
+    <section id="about" className="py-16 lg:py-32 lg:px-20">
       <div className="flex flex-col">
         <div className="mb-4 lg:mb-6">
           <SectionHeader text="О нас" />
