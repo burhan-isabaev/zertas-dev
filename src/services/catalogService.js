@@ -11,4 +11,19 @@ export default class CatalogService {
       throw error;
     }
   }
+
+  static async fetchItemById(itemId) {
+    try {
+      const response = await fetch(
+        `https://api.escuelajs.co/api/v1/products/${itemId}`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(`Failed to fetch item with ID ${itemId}:`, error);
+      throw error;
+    }
+  }
 }

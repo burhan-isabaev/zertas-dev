@@ -17,7 +17,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="pb-16 lg:pb-18 lg:px-20">
+    <section id="portfolio" className="py-16 lg:py-32 lg:px-20">
       <div className="flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <div className="flex flex-col gap-4 mt-auto">

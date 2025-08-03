@@ -32,12 +32,12 @@ function Navbar() {
           <Link className="hover:text-[#e1af87] transition" to="/">
             Главная
           </Link>
-          <Link className="hover:text-[#e1af87] transition" to="#about">
+          <a className="hover:text-[#e1af87] transition" href="#about">
             О нас
-          </Link>
-          <Link className="hover:text-[#e1af87] transition" to="#portfolio">
+          </a>
+          <a className="hover:text-[#e1af87] transition" href="#portfolio">
             Наши работы
-          </Link>
+          </a>
           <Link className="hover:text-[#e1af87] transition" to="/catalog">
             Каталог
           </Link>

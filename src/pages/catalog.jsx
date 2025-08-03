@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CatalogService from "../services/catalogService";
 import CatalogHero from "../sections/catalog-hero";
 import CatalogItem from "../components/catalog-item";
+import Loader from "../components/loader";
 
 function Catalog() {
   const [loading, setLoading] = useState(false);
@@ -28,13 +29,13 @@ function Catalog() {
       <CatalogHero />
 
       {loading && (
-        <div className="flex justify-center items-center h-64">
-          <p className="text-lg text-gray-500">Загрузка...</p>
+        <div className="flex justify-center items-center h-[80vh]">
+          <Loader />
         </div>
       )}
 
       {!loading && (
-        <div className="flex flex-col py-8 gap-8">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center py-8 gap-8">
           {items.map((item) => (
             <CatalogItem key={item.id} item={item} />
           ))}
