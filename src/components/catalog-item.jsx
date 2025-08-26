@@ -1,29 +1,58 @@
+import { useState } from "react";
 import SectionHeader from "../components/section-header";
 import Button from "../components/button";
-import { Link } from "react-router-dom";
+import Download from "../icons/download";
+import Loader from "../components/loader";
 
 const CatalogItem = ({ item }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <div className="border py-10 px-4 border-[#e6ba92] rounded-xl max-w-sm h-[750px]">
-      <Link to={`/catalog/${item.id}`}>
-        <div className="flex flex-col justify-between h-full">
-          <div>
-            <img
-              src={item.images[0]}
-              alt={item.name}
-              className="aspect-square object-cover w-full rounded-xl mx-auto"
-            />
-            <div className="mt-4 inset-0 flex items-end ">
-              <div className="max-w-5xl space-y-6 mb-5 lg:mb-0 z-10">
-                <SectionHeader text={item.category.name} />
-                <h1 className="text-2xl lg:text-2xl font-bold">{item.title}</h1>
-                <p className="lg:mb-4">{item.description.slice(0, 100)}...</p>
+    <div className="border p-4 border-[#e6ba92] rounded-xl lg:max-w-sm w-full min-h-[700px]">
+      <div className="flex flex-col justify-between gap-8 h-full">
+        <div>
+          <div className="relative w-full aspect-square flex items-center justify-center">
+            {/* Show loader until image is loaded */}
+            {!loaded && (
+              <div className="absolute inset-0 flex items-center justify-center rounded-xl">
+                <Loader />
               </div>
+            )}
+
+            <img
+              src={item.images[0]["image"]}
+              alt={item.article}
+              className={`aspect-square object-cover w-full rounded-xl mx-auto transition-opacity duration-500 ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setLoaded(true)}
+            />
+          </div>
+
+          <div className="mt-4 flex w-full">
+            <div className="w-full space-y-3 mb-5 lg:mb-0 z-10">
+              <SectionHeader text={item.title} />
+              <h1 className="text-2xl lg:text-2xl font-bold">{item.article}</h1>
+              {Object.keys(item.parametrs).map((param, index) => (
+                <div key={index}>
+                  <h1 className="text-[#80756e]">
+                    {param.charAt(0).toUpperCase() + param.slice(1)}:
+                  </h1>
+                  <h1 className="text-xl">{item.parametrs[param]}</h1>
+                </div>
+              ))}
             </div>
           </div>
-          <Button text={"сделать заказ"} link="/" />
         </div>
-      </Link>
+
+        <div className="flex justify-between">
+          <Button text={"сделать заказ"} link="/" />
+          <Button
+            text={<Download className="w-5 h-5 text-[#3e3128]" />}
+            link={item.model_link}
+          />
+        </div>
+      </div>
     </div>
   );
 };

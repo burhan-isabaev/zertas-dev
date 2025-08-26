@@ -89,7 +89,7 @@ const Footer = () => {
 
       {/* Lower section */}
       <div className="mt-24 flex flex-col lg:flex-row justify-between items-center text-xs gap-4 border-t border-[#eed5b9]/20 pt-8">
-        <div>@{new Date().getFullYear()} Zertas. Все права защищены</div>
+        <div>@{new Date().getFullYear()} Zertas.</div>
       </div>
     </footer>
   );

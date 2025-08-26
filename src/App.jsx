@@ -14,6 +14,7 @@ import About from "./sections/about";
 import Portfolio from "./sections/portfolio";
 import Catalog from "./pages/catalog";
 import CatalogItem from "./pages/catalog-item";
+import ScrollToTop from "./services/scrollToTop";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
@@ -47,14 +49,6 @@ function AnimatedRoutes() {
               <Section>
                 <Catalog />
               </Section>
-            </motion.div>
-          }
-        />
-        <Route
-          path="/catalog/:itemId"
-          element={
-            <motion.div {...pageVariants}>
-              <CatalogItem />
             </motion.div>
           }
         />

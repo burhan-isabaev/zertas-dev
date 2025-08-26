@@ -1,7 +1,7 @@
 export default class CatalogService {
   static async fetchCatalogItems() {
     try {
-      const response = await fetch("https://api.escuelajs.co/api/v1/products");
+      const response = await fetch("http://91.147.105.144/api/products/");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -11,18 +11,17 @@ export default class CatalogService {
       throw error;
     }
   }
-
-  static async fetchItemById(itemId) {
+  static async fetchItemById(article) {
     try {
       const response = await fetch(
-        `https://api.escuelajs.co/api/v1/products/${itemId}`
+        `http://91.147.105.144/api/products/by-article/${article}`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       return await response.json();
     } catch (error) {
-      console.error(`Failed to fetch item with ID ${itemId}:`, error);
+      console.error(`Failed to fetch item with ID ${article}:`, error);
       throw error;
     }
   }

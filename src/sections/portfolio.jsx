@@ -23,11 +23,11 @@ const Portfolio = () => {
           <div className="flex flex-col gap-4 mt-auto">
             <SectionHeader text="Портфолио" />
             <h1 className="text-4xl font-bold text-[#3e3128]">Наши работы</h1>
-            <p className="text-sm">
+            <p>
               Наши проекты отражают уникальный подход к дизайну, использование
               премиальных материалов и внимание к каждой детали.
             </p>
-            <Button href="/contact" text="Каталог" />
+            <Button link="/catalog" text="Каталог" />
           </div>
         </div>
 

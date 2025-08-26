@@ -33,10 +33,10 @@ function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
-            <Button text={"Получить консультацию"} link="/contact" isLight />
+            <Button text={"Получить консультацию"} link="/" isLight />
 
-            <Link
-              to="/catalog"
+            <a
+              href="#portfolio"
               className="relative inline-flex items-center gap-4 px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-md hover:scale-105 transition-transform duration-300"
             >
               <div>
@@ -60,7 +60,7 @@ function Hero() {
                   />
                 </svg>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

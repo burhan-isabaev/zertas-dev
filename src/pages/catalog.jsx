@@ -5,7 +5,7 @@ import CatalogItem from "../components/catalog-item";
 import Loader from "../components/loader";
 
 function Catalog() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -28,6 +28,12 @@ function Catalog() {
     <div>
       <CatalogHero />
 
+      {items.length === 0 && !loading && (
+        <div className="flex justify-center items-center h-[80vh]">
+          <h1>Нет доступных товаров в каталоге.</h1>
+        </div>
+      )}
+
       {loading && (
         <div className="flex justify-center items-center h-[80vh]">
           <Loader />
@@ -35,7 +41,7 @@ function Catalog() {
       )}
 
       {!loading && (
-        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center py-8 gap-8">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-baseline py-8 gap-8">
           {items.map((item) => (
             <CatalogItem key={item.id} item={item} />
           ))}
