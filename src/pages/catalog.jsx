@@ -12,14 +12,12 @@ function Catalog() {
     setLoading(true);
     CatalogService.fetchCatalogItems()
       .then((items) => {
-        console.log("Catalog items fetched:", items);
         setItems(items);
       })
       .catch((error) => {
         console.error("Error fetching catalog items:", error);
       })
       .finally(() => {
-        console.log("Catalog items fetch attempt completed");
         setLoading(false);
       });
   }, []);

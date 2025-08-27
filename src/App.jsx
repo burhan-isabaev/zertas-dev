@@ -6,15 +6,11 @@ import {
 } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./sections/navbar";
-import Hero from "./sections/hero";
-import Cta from "./sections/cta";
 import Footer from "./sections/footer";
 import Section from "./components/section";
-import About from "./sections/about";
-import Portfolio from "./sections/portfolio";
 import Catalog from "./pages/catalog";
-import CatalogItem from "./pages/catalog-item";
 import ScrollToTop from "./services/scrollToTop";
+import HomePage from "./pages/home-page";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -26,34 +22,31 @@ function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <>
       <ScrollToTop />
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <motion.div {...pageVariants}>
-              <Section>
-                <Hero />
-                <About />
-                <Portfolio />
-              </Section>
-              <Cta />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/catalog"
-          element={
-            <motion.div {...pageVariants}>
-              <Section>
-                <Catalog />
-              </Section>
-            </motion.div>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <motion.div {...pageVariants}>
+                <HomePage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/catalog"
+            element={
+              <motion.div {...pageVariants}>
+                <Section>
+                  <Catalog />
+                </Section>
+              </motion.div>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 

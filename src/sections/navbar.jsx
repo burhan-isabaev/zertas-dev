@@ -32,12 +32,20 @@ function Navbar() {
           <Link className="hover:text-[#e1af87] transition" to="/">
             Главная
           </Link>
-          <a className="hover:text-[#e1af87] transition" href="#about">
+          <Link
+            to="/"
+            state={{ scrollTo: "about" }}
+            className="hover:text-[#e1af87] transition"
+          >
             О нас
-          </a>
-          <a className="hover:text-[#e1af87] transition" href="#portfolio">
+          </Link>
+          <Link
+            to="/"
+            state={{ scrollTo: "portfolio" }}
+            className="hover:text-[#e1af87] transition"
+          >
             Наши работы
-          </a>
+          </Link>
           <Link className="hover:text-[#e1af87] transition" to="/catalog">
             Каталог
           </Link>
@@ -72,8 +80,7 @@ function Navbar() {
             <Link
               to="/"
               className="block hover:text-[#e1af87] transition"
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 handleNavClick("", 0);
               }}
             >
@@ -82,10 +89,10 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="#about"
+              to="/"
+              state={{ scrollTo: "about" }}
               className="block hover:text-[#e1af87] transition"
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 handleNavClick("about", 70);
               }}
             >
@@ -94,10 +101,10 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="#portfolio"
+              to="/"
+              state={{ scrollTo: "portfolio" }}
               className="block hover:text-[#e1af87] transition"
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 handleNavClick("portfolio", 100);
               }}
             >

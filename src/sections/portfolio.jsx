@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SectionHeader from "../components/section-header";
 import Button from "../components/button";
+import InstagramIcon from "../icons/instagram";
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,6 +46,20 @@ const Portfolio = () => {
                 />
               );
             })}
+            <a
+              href="https://www.instagram.com/zertas/"
+              className="inline-flex items-center gap-4 px-6 py-4 border border-[#e1af87] rounded-md hover:scale-105 transition-transform duration-300"
+            >
+              <div>
+                <div className="text-md lg:text-2xl flex flex-col lg:flex-row lg:items-center gap-2 font-semibold mb-1">
+                  <InstagramIcon className="w-5 h-5 lg:w-6 lg:h-6" />
+                  Наш Instagram
+                </div>
+                <p className="text-sm lg:text-md">
+                  Убедитесь в качестве наших работ на нашей странице.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
