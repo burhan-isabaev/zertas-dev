@@ -6,6 +6,7 @@ import Loader from "../components/loader";
 
 const CatalogItem = ({ item }) => {
   const [loaded, setLoaded] = useState(false);
+  const message = `Здравствуйте!%0AЯ пишу вам с сайта и хочу узнать подробнее о товаре ${item.article}`;
 
   return (
     <div className="border p-4 border-[#e6ba92] rounded-xl lg:max-w-sm w-full min-h-[700px]">
@@ -46,7 +47,10 @@ const CatalogItem = ({ item }) => {
         </div>
 
         <div className="flex justify-between">
-          <Button text={"сделать заказ"} link="/" />
+          <Button
+            text={"сделать заказ"}
+            link={`https://wa.me/77754587948?text=${message}`}
+          />
           <Button
             text={<Download className="w-5 h-5 text-[#3e3128]" />}
             link={item.model_link}

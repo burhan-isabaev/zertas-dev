@@ -1,14 +1,6 @@
 import Instagram from "../components/instagram";
 import Whatsapp from "../components/whatsapp";
-import Button from "../components/button";
-
-const services = [
-  { name: "Кухни", href: "/services/kitchens" },
-  { name: "Ванные", href: "/services/bathrooms" },
-  { name: "Мебель", href: "/services/furniture" },
-  { name: "Полы", href: "/services/flooring" },
-  { name: "Здания", href: "/services/buildings" },
-];
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -43,45 +35,33 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-[#eed5b9] transition">
+                <Link className="hover:text-[#e1af87] transition" to="/">
                   Главная
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-[#eed5b9] transition">
+                <Link
+                  to="/"
+                  state={{ scrollTo: "about" }}
+                  className="hover:text-[#e1af87] transition"
+                >
                   О нас
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/catalog" className="hover:text-[#eed5b9] transition">
+                <Link
+                  to="/"
+                  state={{ scrollTo: "portfolio" }}
+                  className="hover:text-[#e1af87] transition"
+                >
+                  Наши работы
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#e1af87] transition" to="/catalog">
                   Каталог
-                </a>
+                </Link>
               </li>
-              <li>
-                <a href="/services" className="hover:text-[#eed5b9] transition">
-                  Услуги
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-[#eed5b9] transition">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-base font-semibold text-[#eed5b9] mb-4">
-              Каталог
-            </h4>
-            <ul className="space-y-2 text-sm">
-              {services.map((s) => (
-                <li key={s.name}>
-                  <a href={s.href} className="hover:text-[#eed5b9] transition">
-                    {s.name}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

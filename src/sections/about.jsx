@@ -16,7 +16,10 @@ const About = () => {
             </h1>
           </div>
           <div>
-            <Button href="/contact" text="Сделать заказ" />
+            <Button
+              link="https://wa.me/77754587948?text=Здравствуйте!%0AЯ%20пишу%20вам%20с%20сайта%20и%20хочу%20узнать%20подробнее%20о%20ваших%20услугах."
+              text="Сделать заказ"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-10 lg:flex-row">

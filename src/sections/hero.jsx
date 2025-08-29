@@ -33,7 +33,11 @@ function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
-            <Button text={"Получить консультацию"} link="/" isLight />
+            <Button
+              text={"Получить консультацию"}
+              link="https://wa.me/77754587948?text=Здравствуйте!%0AЯ%20пишу%20вам%20с%20сайта%20и%20хочу%20узнать%20подробнее%20о%20ваших%20услугах."
+              isLight
+            />
 
             <a
               href="#portfolio"

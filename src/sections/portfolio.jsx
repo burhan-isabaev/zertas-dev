@@ -47,7 +47,7 @@ const Portfolio = () => {
               );
             })}
             <a
-              href="https://www.instagram.com/zertas/"
+              href="https://www.instagram.com/zertas.kz/"
               className="inline-flex items-center gap-4 px-6 py-4 border border-[#e1af87] rounded-md hover:scale-105 transition-transform duration-300"
             >
               <div>
