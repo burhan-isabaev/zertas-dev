@@ -1,7 +1,9 @@
 export default class CatalogService {
   static async fetchCatalogItems() {
     try {
-      const response = await fetch("http://91.147.105.144/api/products/");
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/products/`
+      );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -14,7 +16,9 @@ export default class CatalogService {
   static async fetchItemById(article) {
     try {
       const response = await fetch(
-        `http://91.147.105.144/api/products/by-article/${article}`
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/api/products/by-article/${article}`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
